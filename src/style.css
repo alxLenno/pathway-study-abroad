@@ -35,3 +35,4 @@ body,.sticky-top,.sticky-top header,.hero::before,.cta,.contact-section,.testimo
 body,.sticky-top,.sticky-top header{background-color:#fafbf6}
 .hero::before{background-color:transparent}
 .journey{background-image:radial-gradient(circle,#d2dfc540 1.2px,transparent 1.4px);background-size:18px 18px}
+.hero::before{background-image:none}.sticky-top header{background-image:none;background-color:transparent}
