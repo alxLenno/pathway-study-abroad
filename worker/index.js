@@ -1,7 +1,9 @@
+import {studyPlan} from './study-plan.js';
 const json=(value,status=200)=>Response.json(value,{status,headers:{'Cache-Control':'no-store'}});
 export default {async fetch(request,env){
  const url=new URL(request.url);
  const allowed=!!env.ADMIN_EMAIL && request.headers.get('oai-authenticated-user-email')?.toLowerCase()===env.ADMIN_EMAIL.toLowerCase();
+ if(url.pathname==='/api/study-plan')return studyPlan(request,env);
  if(url.pathname==='/api/session') return json({admin:allowed});
  if(url.pathname==='/api/content'){
   if(request.method==='GET'){

@@ -4,3 +4,4 @@ dist/
 .env
 .env.*
 .sites-runtime/
+!.env.example
