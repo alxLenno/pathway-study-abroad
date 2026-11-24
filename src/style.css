@@ -36,3 +36,10 @@ body,.sticky-top,.sticky-top header{background-color:#fafbf6}
 .hero::before{background-color:transparent}
 .journey{background-image:radial-gradient(circle,#d2dfc540 1.2px,transparent 1.4px);background-size:18px 18px}
 .hero::before{background-image:none}.sticky-top header{background-image:none;background-color:transparent}
+/* Fine, quiet dot grid with a clean navigation header. */
+:root{--paper-texture:radial-gradient(circle,#60775b29 .65px,transparent .85px)}
+body,.cta,.contact-section,.testimonial{background-image:var(--paper-texture);background-size:11px 11px}
+.journey{background-image:radial-gradient(circle,#d2dfc521 .65px,transparent .85px);background-size:11px 11px}
+.sticky-top,.sticky-top header,.announcement{background-image:none}
+.sticky-top{background-color:#fafbf6}.sticky-top header{background-color:transparent}
+.hero::before{background-image:none}
