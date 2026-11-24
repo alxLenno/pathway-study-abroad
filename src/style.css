@@ -29,3 +29,9 @@ body{background-color:#f6f7f1;background-image:var(--paper-texture);background-s
 .sticky-top,.sticky-top header{background-color:#f6f7f1;background-image:var(--paper-texture);background-size:240px 240px}
 .journey,.cta,.contact-section,.testimonial{background-image:var(--paper-texture);background-size:240px 240px}
 .contact-section{background-color:#eaf0e4}.cta{background-color:#e7eedf}.testimonial{background-color:#eef2e8}
+/* Clearly visible dot grid across the page background. */
+:root{--paper-texture:radial-gradient(circle,#60775b55 1.2px,transparent 1.4px)}
+body,.sticky-top,.sticky-top header,.hero::before,.cta,.contact-section,.testimonial{background-image:var(--paper-texture);background-size:18px 18px}
+body,.sticky-top,.sticky-top header{background-color:#fafbf6}
+.hero::before{background-color:transparent}
+.journey{background-image:radial-gradient(circle,#d2dfc540 1.2px,transparent 1.4px);background-size:18px 18px}
