@@ -6,14 +6,18 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build && node scripts/build-worker.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:netlify": "vite build"
   },
   "dependencies": {
+    "@netlify/database": "^2.0.3",
+    "lucide-react": "^0.468.0",
+    "pg": "^8.23.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "lucide-react": "^0.468.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "netlify-cli": "^27.20.1",
     "vite": "^6.0.0"
   }
 }
