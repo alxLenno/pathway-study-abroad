@@ -1,3 +1,4 @@
+import {defaultDestinations} from '../shared/destinations.js';
 import {dashboardApi} from './dashboard.js';
 import {questionsApi} from './questions.js';
 import {plansDashboard} from './plans-dashboard.js';
@@ -30,6 +31,10 @@ export default {async fetch(request,env){
    if(!Array.isArray(data.testimonials)||data.testimonials.length>20)return json({error:'Maximum 20 testimonials.'},400);
    if(data.testimonials.some(t=>!t||typeof t!=='object'||(t.image&& !/^https:\/\//i.test(t.image)&&!/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(t.image))))return json({error:'Student photos must be an uploaded photo or HTTPS image URL.'},400);
    cleaned.testimonials=data.testimonials.map(t=>({name:String(t.name||'').slice(0,120),detail:String(t.detail||'').slice(0,200),quote:String(t.quote||'').slice(0,2000),image:String(t.image||'').slice(0,35000)})).filter(t=>t.name&&t.quote);
+   const destinations=data.destinations??defaultDestinations;
+   if(!Array.isArray(destinations)||destinations.length>30)return json({error:'Maximum 30 destinations.'},400);
+   if(destinations.some(d=>!d||['name','region','tag','text','image'].some(k=>typeof d[k]!=='string')||!d.name.trim()||!d.region.trim()||d.name.length>120||d.region.length>60||d.tag.length>200||d.text.length>3000||d.image.length>2000||!(/^(https:\/\/|\/images\/)/i.test(d.image))))return json({error:'Each destination needs a name, region, description, and HTTPS image URL.'},400);
+   cleaned.destinations=destinations.map(({name,region,tag,text,image})=>({name:name.trim(),region:region.trim(),tag,text,image}));
    await env.DB.prepare('INSERT INTO site_content (id, content, updated_at) VALUES (1, ?, ?) ON CONFLICT(id) DO UPDATE SET content = excluded.content, updated_at = excluded.updated_at').bind(JSON.stringify(cleaned),new Date().toISOString()).run();return json({ok:true});
   }return json({error:'Method not allowed'},405);
  }
