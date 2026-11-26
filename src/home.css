@@ -114,3 +114,11 @@
 .ask-question-body{padding:0 28px 28px;border-top:1px solid #dce6d7}
 .ask-question-body form{padding-top:8px}
 @media(max-width:760px){.ask-question-toggle{padding:22px;align-items:flex-start;flex-direction:column;gap:16px}.ask-question-body{padding:0 22px 22px}.public-home .faq-section>div:first-child{margin-bottom:24px}}
+
+.typed-text{position:relative;display:block}
+.typed-text-space{visibility:hidden;display:block}
+.typed-text-visible{position:absolute;inset:0}
+.typing-cursor{display:inline-block;width:3px;height:.78em;margin-left:5px;background:currentColor;vertical-align:baseline;animation:typing-blink .8s step-end infinite}
+.typed-text-visible:not(.is-typing) .typing-cursor{animation:none;opacity:0}
+@keyframes typing-blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.typing-cursor{display:none}}
