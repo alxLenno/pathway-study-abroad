@@ -46,3 +46,7 @@ Local preview now uses `.local-preview.db` (ignored by Git) and applies the SQLi
 The admin now has dedicated Testimonials and Questions & FAQs sections. Testimonials are managed in a table; their entry form closes after successful publishing. Questions submitted through the public FAQ form are private by default. An admin must write an answer and explicitly publish it before it appears publicly. Contact details are excluded from the public FAQ endpoint. Public question wording can be edited to remove personal information. Unpublishing removes a question from the FAQs, and deleting removes it from both management and public views (soft deletion in storage).
 
 The existing four editorial FAQs are seeded into the questions table so they can also be edited, unpublished, or removed. No email is sent when questions are submitted or answered.
+
+## Dashboard workspace
+
+The admin opens on a live Overview with total plans, new enquiries, unanswered questions, testimonial counts, seven-day submission activity, the admissions pipeline, recent plans, and a pending-question queue. Data comes from the authenticated, read-only `/api/dashboard` endpoint. No analytics are fabricated. Navigation uses a fixed desktop sidebar and a mobile drawer. New-enquiry and unanswered-question metrics open their corresponding filtered views. Existing management pages remain available from the sidebar.

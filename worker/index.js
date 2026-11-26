@@ -1,3 +1,4 @@
+import {dashboardApi} from './dashboard.js';
 import {questionsApi} from './questions.js';
 import {plansDashboard} from './plans-dashboard.js';
 import {studyPlan} from './study-plan.js';
@@ -5,6 +6,7 @@ const json=(value,status=200)=>Response.json(value,{status,headers:{'Cache-Contr
 export default {async fetch(request,env){
  const url=new URL(request.url);
  const allowed=!!env.ADMIN_EMAIL && request.headers.get('oai-authenticated-user-email')?.toLowerCase()===env.ADMIN_EMAIL.toLowerCase();
+ if(url.pathname==='/api/dashboard')return dashboardApi(request,env,allowed);
  if(['/api/questions','/api/faqs'].includes(url.pathname))return questionsApi(request,env,allowed);
  if(url.pathname==='/api/study-plans')return plansDashboard(request,env,allowed);
  if(url.pathname==='/api/study-plan'){if(env.ENABLE_PLAN_EMAILS!=='true')return json(request.method==='GET'?{emailEnabled:false}:{error:'Email sending is paused. Please save your plan in the dashboard.'},request.method==='GET'?200:410);return studyPlan(request,env);}
