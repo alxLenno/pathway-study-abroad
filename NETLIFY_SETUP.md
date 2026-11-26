@@ -40,3 +40,9 @@ New student submissions are saved in the `study_plans` table and shown on the de
 Email is paused in the public flow. The earlier Resend integration remains available for future work, but the legacy endpoint is disabled unless ENABLE_PLAN_EMAILS is explicitly set to true. The current form submits only to the dashboard and sends no emails.
 
 Local preview now uses `.local-preview.db` (ignored by Git) and applies the SQLite migration files. Existing locally saved website content is imported once. Hosted storage remains Netlify Postgres.
+
+## Testimonials and moderated FAQs
+
+The admin now has dedicated Testimonials and Questions & FAQs sections. Testimonials are managed in a table; their entry form closes after successful publishing. Questions submitted through the public FAQ form are private by default. An admin must write an answer and explicitly publish it before it appears publicly. Contact details are excluded from the public FAQ endpoint. Public question wording can be edited to remove personal information. Unpublishing removes a question from the FAQs, and deleting removes it from both management and public views (soft deletion in storage).
+
+The existing four editorial FAQs are seeded into the questions table so they can also be edited, unpublished, or removed. No email is sent when questions are submitted or answered.
