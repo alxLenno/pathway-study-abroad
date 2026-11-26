@@ -122,3 +122,8 @@
 .typed-text-visible:not(.is-typing) .typing-cursor{animation:none;opacity:0}
 @keyframes typing-blink{50%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.typing-cursor{display:none}}
+
+/* A plane follows the letters as the headline types and erases. */
+.public-home .typing-cursor{display:inline-block;width:.44em;height:.44em;margin-left:.12em;background:none;vertical-align:baseline;stroke-width:1.7;animation:none;opacity:1;transform:rotate(12deg)}
+.public-home .typed-text-visible:not(.is-typing) .typing-cursor{opacity:1}
+@media(prefers-reduced-motion:reduce){.public-home .typing-cursor{display:none}}

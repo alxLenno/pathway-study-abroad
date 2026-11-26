@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import {Plane} from 'lucide-react';
 
 export default function TypedText({text}) {
   const [count,setCount]=useState(0);
@@ -20,6 +21,6 @@ export default function TypedText({text}) {
   },[text]);
   return <span className="typed-text" aria-label={text}>
     <span className="typed-text-space" aria-hidden="true">{text}</span>
-    <span className={'typed-text-visible'+(count<text.length?' is-typing':'')} aria-hidden="true">{text.slice(0,count)}<span className="typing-cursor"/></span>
+    <span className={'typed-text-visible'+(count<text.length?' is-typing':'')} aria-hidden="true">{text.slice(0,count)}<Plane className="typing-cursor" aria-hidden="true"/></span>
   </span>;
 }
