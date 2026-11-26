@@ -74,3 +74,8 @@ body,.cta,.contact-section,.testimonial{background-image:var(--paper-texture);ba
  .sticky-top nav{margin-left:0;gap:18px;white-space:normal}
  .sticky-top .announcement{padding:8px 22px}
 }
+
+/* Anchor the masthead to the viewport, including at the end of the page. */
+.sticky-top{position:fixed;inset:0 0 auto;width:100%}
+section[id]{scroll-margin-top:145px}
+@media(max-width:760px){section[id]{scroll-margin-top:135px}}
