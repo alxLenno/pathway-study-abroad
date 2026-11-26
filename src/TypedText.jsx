@@ -6,10 +6,15 @@ export default function TypedText({text}) {
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){setCount(text.length);return;}
     setCount(0);
     let index=0;
+    let deleting=false;
     let timer=setTimeout(function type(){
-      index+=1;
+      if(!text.length)return;
+      index+=deleting?-1:1;
       setCount(index);
-      if(index<text.length) timer=setTimeout(type,65);
+      let delay=deleting?35:65;
+      if(index===text.length){deleting=true;delay=2200;}
+      else if(index===0){deleting=false;delay=600;}
+      timer=setTimeout(type,delay);
     },450);
     return ()=>clearTimeout(timer);
   },[text]);
