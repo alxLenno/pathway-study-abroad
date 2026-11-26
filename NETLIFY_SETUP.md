@@ -32,3 +32,11 @@ Netlify production websites are normally publicly accessible. This is separate f
 `node --test tests/*.test.mjs`
 
 Database provisioning, SQL migration execution against hosted Postgres, and real email delivery require a connected account and remain to be verified after deployment.
+
+## Admissions dashboard
+
+New student submissions are saved in the `study_plans` table and shown on the default Study plans tab at `/admin`. Admins can search by name, email, or destination, filter and update enquiry status, browse pages, and download individual plans as PDFs. Student contact details are never exposed by the anonymous API. The new migration adds the table without changing existing website content.
+
+Email is paused in the public flow. The earlier Resend integration remains available for future work, but the legacy endpoint is disabled unless ENABLE_PLAN_EMAILS is explicitly set to true. The current form submits only to the dashboard and sends no emails.
+
+Local preview now uses `.local-preview.db` (ignored by Git) and applies the SQLite migration files. Existing locally saved website content is imported once. Hosted storage remains Netlify Postgres.

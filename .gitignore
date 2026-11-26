@@ -7,3 +7,4 @@ dist/
 !.env.example
 .netlify/
 tmp/
+.local-preview.db*

@@ -15,6 +15,13 @@
       "when": 1795485600000,
       "tag": "0001_email_requests",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1795640400000,
+      "tag": "0002_study_plans",
+      "breakpoints": true
     }
   ]
 }
