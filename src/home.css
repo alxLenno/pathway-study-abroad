@@ -1,0 +1,99 @@
+/* Public homepage: a consistent editorial layout in the Pathway palette. */
+.public-home{--home-width:1200px;--home-line:#dfe7e1;--home-muted:#61736b;color:#183e34}
+.public-home .hero,.public-home .section{max-width:var(--home-width);padding-left:36px;padding-right:36px}
+.public-home .hero{margin-top:36px;grid-template-columns:1fr 1fr;gap:56px;min-height:570px;align-items:center;padding-bottom:24px}
+.public-home .hero::before{display:none}
+.public-home .hero-copy{padding:20px 0 32px}
+.public-home .eyebrow{font-size:11px;line-height:1.6;letter-spacing:1.9px;font-weight:700;color:#617b6b}
+.public-home h1{font-size:clamp(48px,5vw,68px);line-height:1.08;letter-spacing:-3px;margin:24px 0;font-weight:700}
+.public-home h1 em{color:#6c8963}
+.public-home .hero-copy>p{font-size:17px;line-height:1.85;max-width:420px;color:var(--home-muted)}
+.public-home .hero-actions{margin:30px 0;gap:24px;flex-wrap:wrap}
+.public-home .button{border-radius:9px;min-height:48px;padding:15px 23px;box-shadow:0 4px 12px #173f3510}
+.public-home .text-link{font-size:14px;gap:10px}
+.public-home .hero-note{font-size:13px;gap:12px}
+.public-home .hero-visual{height:540px;min-height:0;width:100%;border-radius:24px;box-shadow:0 16px 50px #193c3514;margin:0 0 26px}
+.public-home .image-shade{background:linear-gradient(180deg,#12352b00 30%,#102e2bd9 100%)}
+.public-home .image-caption{left:32px;bottom:70px}
+.public-home .image-caption p{font-size:38px;letter-spacing:-1.5px;line-height:1.2}
+.public-home .floating-note{bottom:-24px;right:24px;left:24px;border:1px solid #e3e9df;border-radius:12px;padding:18px;box-shadow:0 8px 30px #173f3512}
+.public-home .benefits{max-width:1128px;margin:40px auto 0;padding:24px 0;gap:20px;font-size:13px;border-color:var(--home-line)}
+.public-home .benefits>span{font-size:10px;max-width:105px;line-height:1.8}
+.public-home .benefits>div{gap:10px}
+.public-home .benefits svg{width:19px;height:19px;background:#eaf1e7;border-radius:50%;padding:3px;box-sizing:content-box}
+.public-home .section{padding-top:88px;padding-bottom:88px}
+.public-home h2{font-size:clamp(30px,3vw,40px);line-height:1.22;letter-spacing:-1.5px;font-weight:650}
+.public-home .section-top{align-items:end;gap:32px}
+.public-home .section-top>p{font-size:15px;line-height:1.75;color:var(--home-muted)}
+.public-home .filters{margin:30px 0 24px;gap:10px;flex-wrap:wrap}
+.public-home .filters button{font-size:13px;padding:10px 17px;border-color:var(--home-line);border-radius:8px}
+.public-home .country-grid{gap:20px}
+.public-home .country{height:300px;border-radius:14px;box-shadow:0 6px 20px #173f350a}
+.public-home .country-overlay{background:linear-gradient(180deg,transparent 25%,#0c3028e6 100%)}
+.public-home .country-copy{left:22px;bottom:24px}
+.public-home .country-copy small{font-size:12px;line-height:1.5}
+.public-home .country h3{font-size:23px;line-height:1.2;margin-top:8px}
+.public-home .country-icon{top:17px;right:17px;width:32px;height:32px;background:#ffffff16;backdrop-filter:blur(5px)}
+.public-home .destination-note{margin-top:28px;font-size:13px;line-height:1.7}
+.public-home .journey{max-width:none;padding:72px max(36px,calc((100vw - 1128px)/2));gap:80px;background-color:#173f35;background-image:none}
+.public-home .journey .eyebrow{color:#c4d7b4}
+.public-home .journey h2{font-size:44px}
+.public-home .journey-intro>p{font-size:16px;max-width:370px;line-height:1.8;color:#c4d2ca}
+.public-home .step{gap:20px;padding:24px 0;border-color:#ffffff20}
+.public-home .step-icon{border-radius:13px;background:#ffffff09;border-color:#ffffff25;width:48px;height:48px}
+.public-home .step h3{font-size:19px;font-weight:600}
+.public-home .step p{font-size:15px;line-height:1.8;max-width:420px}
+.public-home .support{gap:64px}
+.public-home .support-image{height:430px}
+.public-home .support-image>img{border-radius:18px}
+.public-home .support-label{border-radius:10px;left:20px;bottom:20px;font-size:13px;box-shadow:0 8px 30px #173f3515}
+.public-home .support-copy>p{font-size:16px;line-height:1.8;color:var(--home-muted)}
+.public-home .support-copy li{font-size:15px;line-height:1.6;margin:16px 0}
+.public-home .testimonials{padding-top:16px}
+.public-home .testimonial-grid{gap:24px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.public-home .testimonial{padding:30px;border-radius:14px;border:1px solid var(--home-line);background:#fff;background-image:none;box-shadow:0 6px 24px #193c3505;max-width:720px}
+.public-home .testimonial blockquote{font-size:17px;line-height:1.85;color:#334f43;margin:20px 0 28px}
+.public-home .testimonial figcaption{padding-top:20px;border-top:1px solid #edf1eb}
+.public-home .testimonial figcaption strong{font-size:15px}
+.public-home .testimonial figcaption span{font-size:13px;line-height:1.6}
+.public-home .faq-section{gap:72px;padding-top:16px;grid-template-columns:.85fr 1.15fr}
+.public-home .faq-section>div>p{font-size:16px;line-height:1.8;color:var(--home-muted)}
+.public-home .faq{border-color:var(--home-line)}
+.public-home .faq button{font-size:16px;padding:23px 0;line-height:1.6;gap:18px}
+.public-home .faq p{font-size:15px;line-height:1.85;color:var(--home-muted)}
+.public-home .cta{max-width:1128px;margin:0 auto 80px;padding:48px;border:1px solid #d9e5d1;border-radius:18px;background:#edf3e8;background-image:none;gap:30px}
+.public-home .cta h2{font-size:38px}
+.public-home .cta p{font-size:16px;line-height:1.8}
+.public-home .cta .button{flex-shrink:0}
+.public-home .contact-section{padding:72px max(36px,calc((100vw - 1128px)/2));background-color:#f0f4ee;margin-bottom:48px;border-top:1px solid #e0e8dc;border-bottom:1px solid #e0e8dc}
+.public-home .contact-inner{gap:64px}
+.public-home .contact-copy>p{font-size:16px;line-height:1.85;color:var(--home-muted)}
+.public-home .contact-detail{gap:14px;margin-top:28px}
+.public-home .contact-detail p{font-size:15px}
+.public-home .map-container{border-radius:16px;box-shadow:0 8px 24px #193c3509}
+.public-home .map-caption{border-radius:9px;font-size:13px;padding:16px;line-height:1.6}
+@media(max-width:1050px){
+ .public-home .hero{gap:32px}.public-home .hero-visual{height:510px}.public-home h1{font-size:54px}
+ .public-home .benefits{margin-left:36px;margin-right:36px;flex-wrap:wrap}.public-home .benefits>span{max-width:none}
+ .public-home .journey{gap:40px}.public-home .support{gap:36px}.public-home .country-grid{gap:14px}.public-home .country-copy{left:16px}.public-home .country h3{font-size:20px}
+ .public-home .cta{margin-left:36px;margin-right:36px}.public-home .contact-inner{gap:36px}
+}
+@media(max-width:760px){
+ .public-home .hero,.public-home .section{padding-left:22px;padding-right:22px}
+ .public-home .hero{grid-template-columns:1fr;margin-top:16px;gap:22px;padding-bottom:0;min-height:0}
+ .public-home .hero-copy{padding:16px 0 0}.public-home h1{font-size:clamp(42px,10.9vw,60px);letter-spacing:-2.2px;margin:20px 0;line-height:1.1}
+ .public-home .hero-copy>p{font-size:16px}.public-home .hero-actions{gap:18px;margin:25px 0;flex-wrap:wrap}.public-home .hero-actions .text-link{font-size:13px}
+ .public-home .button{padding:14px 19px}.public-home .hero-note{font-size:12px}
+ .public-home .hero-visual{height:420px;margin:12px 0 26px;border-radius:18px}.public-home .image-caption{left:24px;bottom:70px}.public-home .image-caption p{font-size:34px}
+ .public-home .floating-note{left:16px;right:16px;padding:16px;bottom:-20px;font-size:12px}
+ .public-home .benefits{margin:34px 22px 0;grid-template-columns:1fr 1fr;gap:19px 12px;padding:22px 0;font-size:12px}.public-home .benefits>span{max-width:none}
+ .public-home .section{padding-top:58px;padding-bottom:58px}.public-home h2{font-size:31px;letter-spacing:-1px}
+ .public-home .section-top>p{font-size:15px;margin-top:16px}.public-home .filters{gap:8px;margin-top:24px}.public-home .filters button{font-size:12px;padding:9px 12px}
+ .public-home .country-grid{gap:12px}.public-home .country{height:250px}.public-home .country-copy{left:14px;bottom:19px}.public-home .country h3{font-size:20px}.public-home .country-copy small{font-size:11px}
+ .public-home .journey{padding:48px 22px;gap:18px}.public-home .journey h2{font-size:36px}.public-home .journey-intro>p{font-size:15px}.public-home .step p{font-size:14px}.public-home .step h3{font-size:18px}
+ .public-home .support{gap:30px}.public-home .support-image{height:340px}.public-home .support-copy>p{font-size:15px}
+ .public-home .testimonials{padding-top:0}.public-home .testimonial{padding:25px}.public-home .testimonial blockquote{font-size:16px}
+ .public-home .faq-section{grid-template-columns:1fr;gap:24px;padding-top:0}.public-home .faq button{font-size:15px;padding:20px 0}
+ .public-home .cta{margin:0 22px 48px;padding:30px 25px;display:block}.public-home .cta h2{font-size:31px}.public-home .cta p{font-size:15px;max-width:none}.public-home .cta .button{margin-top:22px}
+ .public-home .contact-section{padding:48px 22px;margin-bottom:32px}.public-home .contact-inner{gap:32px}.public-home .contact-copy>p{font-size:15px}
+}
