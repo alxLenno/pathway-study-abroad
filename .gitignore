@@ -6,3 +6,4 @@ dist/
 .sites-runtime/
 !.env.example
 .netlify/
+tmp/

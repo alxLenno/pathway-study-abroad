@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@netlify/database": "^2.0.3",
+    "@pdf-lib/fontkit": "^1.1.1",
     "lucide-react": "^0.468.0",
+    "pdf-lib": "^1.17.1",
     "pg": "^8.23.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "netlify-cli": "^27.20.1",
     "vite": "^6.0.0"
   }
